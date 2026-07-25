@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Then and Now — CurioPort</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  html{ scroll-behavior: smooth; }
+
+  .section-pill{
+    display:block;
+    margin: 0 auto 40px auto;
+    width:fit-content;
+    background: var(--teal-nav);
+    color:#fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight:700;
+    letter-spacing:1px;
+    font-size:1rem;
+  }
+
+  .then-now-section{
+    background: linear-gradient(135deg, var(--teal-bright), var(--teal-mid));
+    padding: 60px 24px;
+  }
+
+  .then-now-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .then-now-card{
+    display:block;
+    transition: transform 0.2s ease;
+  }
+  .then-now-card:hover{ transform: translateY(-4px); }
+
+  .then-now-card .tag{
+    background: var(--coral);
+    color:#fff;
+    font-weight:700;
+    font-size:0.85rem;
+    text-align:center;
+    padding: 10px 14px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .then-now-card .photo{
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .detail-section{
+    background: var(--cream);
+    padding: 60px 24px;
+    scroll-margin-top: 80px;
+
+  }
+
+  .detail-inner{
+    max-width: 900px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap: 36px;
+    align-items:center;
+  }
+
+  .detail-photo{
+    height: 220px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .detail-inner h2{
+    color: var(--teal-mid);
+    font-size: 1.6rem;
+    margin: 0 0 12px 0;
+  }
+
+  .detail-inner p{
+    color:#444;
+    line-height:1.7;
+    font-size:0.95rem;
+  }
+
+  .detail-section.alt{
+    background: #f2ede0;
+  }
+
+  /* ---------- BEFORE / AFTER SLIDER ---------- */
+  .ba-slider{
+    position:relative;
+    width:100%;
+    height:220px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    user-select:none;
+    cursor: ew-resize;
+  }
+
+  .ba-slider .ba-img{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+  }
+
+  .ba-slider .ba-after{
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .ba-slider .ba-divider{
+    position:absolute;
+    top:0;
+    left:50%;
+    width:3px;
+    height:100%;
+    background:#fff;
+    transform: translateX(-50%);
+    pointer-events:none;
+  }
+
+  .ba-slider .ba-handle{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#fff;
+    transform: translate(-50%, -50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    pointer-events:none;
+  }
+
+  .ba-slider .ba-handle::before{
+    content:"⇔";
+    color: var(--teal-nav);
+    font-size: 1rem;
+    font-weight:800;
+  }
+
+  .ba-label{
+    position:absolute;
+    top:10px;
+    background: rgba(0,0,0,0.55);
+    color:#fff;
+    font-size:0.7rem;
+    font-weight:700;
+    letter-spacing:0.5px;
+    padding:4px 10px;
+    border-radius:20px;
+    pointer-events:none;
+  }
+
+  .ba-label.before{ left:10px; }
+  .ba-label.after{ right:10px; }
+
+  @media (max-width: 700px){
+    .detail-inner{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-links">
+    <a href="about.html">About Us</a>
+    <a href="map-and-directory.html">Map and Directory</a>
+    <a href="history.html">History</a>
+    <a href="hidden-gems.html">Hidden Gems</a>
+    <a href="architecture.html">Architecture</a>
+  </div>
+  <a class="logo" href="index.html">
+    <img src="https://res.cloudinary.com/zcatt5nm/image/upload/f_auto,q_auto/image_1_jowpo2" alt="CurioPort logo">
+  </a>
+</nav>
+
+<section class="page-hero">
+  <h1>Then and Now</h1>
+  <p>Unveiling the transformation of the neighbourhood's shophouses and streets.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="history.html">History</a> / Then and Now</div>
+</section>
+
+<section class="then-now-section">
+  <span class="section-pill">THEN AND NOW</span>
+  <div class="then-now-grid">
+    <a class="then-now-card" href="#koon-seng-road-shophouses">
+      <div class="tag">Koon Seng Road Shophouses</div>
+      <div class="photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/v1784992358/shophouses_now_edysh8.jpg');"></div>
+    </a>
+    <a class="then-now-card" href="#katong-shopping-centre">
+      <div class="tag">Katong Shopping Centre</div>
+      <div class="photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/shopping_centre_now_xneddh.jpg');"></div>
+    </a>
+    <a class="then-now-card" href="#joo-chiat-police-station">
+      <div class="tag">Joo Chiat Police Station</div>
+      <div class="photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/119954098_10163881235570136_8578162511822975825_n-628x419.jpg_qhv3vw.webp');"></div>
+    </a>
+  </div>
+</section>
+
+<section class="detail-section" id="koon-seng-road-shophouses">
+  <div class="detail-inner">
+    <div class="ba-slider">
+      <div class="ba-img ba-before" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/v1784992358/shophouses_now_edysh8.jpg');"></div>
+      <div class="ba-img ba-after" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/v1784992444/shophouses_then_pkof8t.jpg');"></div>
+      <div class="ba-divider"></div>
+      <div class="ba-handle"></div>
+      <span class="ba-label before">THEN</span>
+      <span class="ba-label after">NOW</span>
+    </div>
+    <div>
+      <h2>Koon Seng Road Shophouses</h2>
+      <p>Koon Seng Road's iconic pastel-colored shophouses were built in the 1920s and were once home to wealthy Peranakan and Eurasian families. The area was designated a Conservation Area by the Urban Redevelopment Authority (URA) in 1991, protecting its historic facades, timber windows, and decorative tiles. Today, these privately owned homes continue to serve as residences while preserving Singapore's Peranakan heritage and attracting visitors interested in Katong's rich history.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section alt" id="katong-shopping-centre">
+  <div class="detail-inner">
+    <div class="ba-slider">
+      <div class="ba-img ba-before" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/shopping_centre_now_xneddh.jpg');"></div>
+      <div class="ba-img ba-after" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/shopping_centre_then_pbgvsj.jpg');"></div>
+      <div class="ba-divider"></div>
+      <div class="ba-handle"></div>
+      <span class="ba-label before">THEN</span>
+      <span class="ba-label after">NOW</span>
+    </div>
+    <div>
+      <h2>Katong Shopping Centre</h2>
+      <p>Opened in 1973, Katong Shopping Centre was one of Singapore's earliest fully air-conditioned shopping malls and was regarded as a modern landmark of its time. It offered a comfortable indoor shopping experience when traditional shophouses and open-air markets were still the norm. Today, despite the redevelopment of the surrounding area, the mall remains open and continues to preserve its distinctive 1970s architecture, original terrazzo flooring, and nostalgic atmosphere, making it a beloved landmark that reflects Katong's rich history and heritage.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section" id="joo-chiat-police-station">
+  <div class="detail-inner">
+    <div class="ba-slider">
+      <div class="ba-img ba-before" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/119954098_10163881235570136_8578162511822975825_n-628x419.jpg_qhv3vw.webp');"></div>
+      <div class="ba-img ba-after" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/police_station_then_mazuq2.jpg');"></div>
+      <div class="ba-divider"></div>
+      <div class="ba-handle"></div>
+      <span class="ba-label before">THEN</span>
+      <span class="ba-label after">NOW</span>
+    </div>
+    <div>
+      <h2>Joo Chiat Police Station</h2>
+      <p>The police station was built in 1928 by the Singapore Improvement Trust/Public Works Department to serve the growing Joo Chiat and Katong communities. It played an important role in maintaining law and order during a period when the area faced problems with secret societies, smuggling, and illegal gambling. The station was decommissioned in the late 1980s as policing was reorganized into larger regional headquarters and Neighborhood Police Centres. Recognized for its historical and architectural value, the main building was conserved and later incorporated into Katong Square in the 2010s. Today, it has been repurposed into a dining destination, housing establishments such as Baba Chews Bar & Eatery and a heritage-themed Starbucks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Ready to start exploring?</h2>
+  <a class="btn" href="index.html#participate">GET STARTED</a>
+</section>
+
+<footer>
+  © CurioPort — Katong-Joo Chiat
+</footer>
+
+<script>
+  document.querySelectorAll('.ba-slider').forEach(function(slider){
+    var after = slider.querySelector('.ba-after');
+    var divider = slider.querySelector('.ba-divider');
+    var handle = slider.querySelector('.ba-handle');
+    var dragging = false;
+
+    function setPosition(clientX){
+      var rect = slider.getBoundingClientRect();
+      var pct = ((clientX - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      divider.style.left = pct + '%';
+      handle.style.left = pct + '%';
+    }
+
+    slider.addEventListener('mousedown', function(e){
+      dragging = true;
+      setPosition(e.clientX);
+    });
+    window.addEventListener('mousemove', function(e){
+      if(dragging){ setPosition(e.clientX); }
+    });
+    window.addEventListener('mouseup', function(){ dragging = false; });
+
+    slider.addEventListener('touchstart', function(e){
+      dragging = true;
+      setPosition(e.touches[0].clientX);
+    });
+    slider.addEventListener('touchmove', function(e){
+      if(dragging){ setPosition(e.touches[0].clientX); }
+    });
+    slider.addEventListener('touchend', function(){ dragging = false; });
+  });
+</script>
+
+</body>
+</html>

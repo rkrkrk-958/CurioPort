@@ -10,8 +10,9 @@
 
 <nav>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
-    <a href="map-and-directory.html" class="active">Map and Directory</a>
+    <a href="map-and-directory.html">Map and Directory</a>
     <a href="history.html">History</a>
     <a href="hidden-gems.html">Hidden Gems</a>
     <a href="architecture.html">Architecture</a>
@@ -23,56 +24,65 @@
 
 <section class="page-hero">
   <h1>Map and Directory</h1>
-  <p>Find your way around the trail and the shops that make it up.</p>
   <div class="breadcrumb"><a href="index.html">Home</a> / Map and Directory</div>
 </section>
 
 <section class="content">
   <div class="content-inner">
-    <h2>Trail Map</h2>
-    <div class="map-frame">Interactive trail map placeholder</div>
-    <div style="display:flex; justify-content:center; margin-bottom:40px;">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1PnaDKvlk5q8Bau09UcK7yuZrYTm7A5k&ehbc=2E312F&noprof=1" width="640" height="480" style="border:0; border-radius:14px; max-width:100%; box-shadow:0 6px 18px rgba(0,0,0,0.12);"></iframe>
+
+    <div class="map-directory">
+
+      <div class="map-section">
+        <h2>Trail Map</h2>
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1PnaDKvlk5q8Bau09UcK7yuZrYTm7A5k&ehbc=2E312F&noprof=1"
+          width="100%"
+          height="500"
+          style="border:0; border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+        </iframe>
+      </div>
+
+      <div class="directory-section">
+        <h2>Directory</h2>
+
+        <div class="directory-list">
+
+          <div class="directory-item">
+            <div class="pin pin-red">1</div>
+            <div>
+              <h3>Passport Collection Areas</h3>
+              <p>
+                1. i12 Katong<br>
+                2. Singapore Visitor Centre @ Kim Choo Kueh Chang<br>
+                Open daily, 10am – 6pm.
+              </p>
+            </div>
+          </div>
+
+          <div class="directory-item">
+          <div class="pin pin-blue">2</div>
+          <div>
+              <h3>Stamping Booths</h3>
+              <p>1. The Red House <br>
+2. The Intan  <br>
+3. Koon Seng House <br>
+4. Mural: MedleyAlley</p>
+            </div>
+          </div>
+
+         <div class="directory-item">
+         <div class="pin pin-green">3</div>
+         <div>
+              <h3>Redemption Area</h3>
+              <p>1. Joo Chiat Community Club <br>
+Open daily, 10am – 6pm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <h2>Directory</h2>
-    <div class="directory-list">
-      <div class="directory-item">
-        <div class="pin">1</div>
-        <div>
-          <h3>Passport Collection Point — Joo Chiat Complex</h3>
-          <p>Pick up your trail passport here. Open daily, 10am – 6pm.</p>
-        </div>
-      </div>
-      <div class="directory-item">
-        <div class="pin">2</div>
-        <div>
-          <h3>Passport Collection Point — Katong Junction</h3>
-          <p>Second collection point, right by the main entrance.</p>
-        </div>
-      </div>
-      <div class="directory-item">
-        <div class="pin">3</div>
-        <div>
-          <h3>Peranakan Shophouse Row</h3>
-          <p>A stretch of colourful heritage shophouses, best photographed in the late afternoon.</p>
-        </div>
-      </div>
-      <div class="directory-item">
-        <div class="pin">4</div>
-        <div>
-          <h3>Local Eateries Cluster</h3>
-          <p>A handful of long-running kitchens serving Peranakan and local favourites.</p>
-        </div>
-      </div>
-      <div class="directory-item">
-        <div class="pin">5</div>
-        <div>
-          <h3>Redemption Booth — Katong Park</h3>
-          <p>Bring your completed passport here to redeem your prize.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -82,7 +92,7 @@
 </section>
 
 <footer>
-  © CurioPort — Katong-Joo Chiat Heritage Trail
+  © CurioPort — Katong-Joo Chiat
 </footer>
 
 </body>

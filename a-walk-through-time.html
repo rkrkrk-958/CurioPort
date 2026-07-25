@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Walk Through Time — CurioPort</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  html{ scroll-behavior: smooth; }
+  .walk-section{
+    background: linear-gradient(180deg, var(--teal-bright), var(--teal-dark));
+    padding: 60px 24px 80px 24px;
+  }
+
+  .walk-section h2{
+    color:#fff;
+    font-weight:400;
+    font-size:1.8rem;
+    margin-bottom:50px;
+    font-family: Georgia, serif;
+    text-align:center;
+  }
+
+  .v-timeline{
+    position:relative;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 34px;
+    border-left: 3px solid rgba(255,255,255,0.5);
+  }
+
+  .v-timeline-item{
+    position:relative;
+    margin-bottom: 50px;
+  }
+
+  .v-timeline-item:last-child{ margin-bottom: 0; }
+
+  .v-timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-43px;
+    top:4px;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background: var(--coral);
+    border: 3px solid var(--cream);
+  }
+
+  .v-timeline-photo{
+    width:100%;
+    max-width:320px;
+    height:150px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position:center;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  }
+
+  .v-timeline-item .year{
+    color: var(--gold);
+    font-weight:800;
+    font-size: 0.85rem;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin-bottom: 4px;
+  }
+
+  .v-timeline-item h3{
+    margin: 0 0 8px 0;
+    color:#fff;
+    font-size:1.15rem;
+  }
+
+  .v-timeline-item p{
+    color:#eafaf8;
+    font-size:0.9rem;
+    line-height:1.6;
+    margin:0;
+    max-width: 480px;
+  }
+
+  .color-hero{
+    background-size: cover;
+    background-position:center;
+    height: 340px;
+  }
+
+  .color-section{
+    background: linear-gradient(135deg, var(--teal-bright), var(--teal-dark));
+    padding: 50px 24px 70px 24px;
+  }
+
+  .color-section h2{
+    color:#fff;
+    font-size:2rem;
+    max-width:1000px;
+    margin: 0 auto 30px auto;
+  }
+
+  .color-row{
+    display:grid;
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    align-items:stretch;
+  }
+
+  .color-label{
+    background: var(--teal-nav);
+    color:#fff;
+    font-weight:700;
+    border-radius: 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding: 16px;
+  }
+
+  .color-desc{
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    color:#eafaf8;
+    padding: 16px 22px;
+    font-size:0.9rem;
+    line-height:1.6;
+  }
+
+  @media (max-width: 700px){
+    .color-row{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-links">
+    <a href="about.html">About Us</a>
+    <a href="map-and-directory.html">Map and Directory</a>
+    <a href="history.html">History</a>
+    <a href="hidden-gems.html">Hidden Gems</a>
+    <a href="architecture.html">Architecture</a>
+  </div>
+  <a class="logo" href="index.html">
+    <img src="https://res.cloudinary.com/zcatt5nm/image/upload/f_auto,q_auto/image_1_jowpo2" alt="CurioPort logo">
+  </a>
+</nav>
+
+<section class="page-hero">
+  <h1>A Walk Through Time</h1>
+  <p>Charting the evolving timeline of Katong-Joo Chiat's unique heritage.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="history.html">History</a> / A Walk Through Time</div>
+</section>
+
+<section class="walk-section">
+  <h2>A Walk Through Time</h2>
+  <div class="v-timeline">
+    <div class="v-timeline-item">
+      <div class="year">1819</div>
+      <h3>Tanjong Katong Marked as a Boundary</h3>
+      <p>Tanjong Katong becomes the eastern boundary of Stamford Raffles' British settlement, taking its name from the now-extinct Katong sea turtle once found along the coast.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="year">1820s</div>
+      <h3>Plantations and Kampongs</h3>
+      <p>The land is largely given over to coconut and cotton plantations, dotted with kampongs and seaside bungalows.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/chew-joo-chiat_ouyedem.jpg');"></div>
+      <div class="year">1900 – 1910</div>
+      <h3>The Rise of Chew Joo Chiat</h3>
+      <p>Wealthy trader and philanthropist Chew Joo Chiat acquires large plots of land for plantations, earning him the title "King of Katong."</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/joo_chiat_road_A_bokz1y.jpg');"></div>
+      <div class="year">1917</div>
+      <h3>Joo Chiat Road Opens</h3>
+      <p>A major dirt track through his property is opened to the public and becomes known as Joo Chiat Road.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/Joo-Chiat-Road-Old-Days_uaiwj1.jpg');"></div>
+      <div class="year">1920 – 1930</div>
+      <h3>Eastward Expansion</h3>
+      <p>Wealthy communities move eastward out of the city centre, building the iconic Peranakan shophouses and seaside villas that remain today.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="year">1942 – 1945</div>
+      <h3>Wartime Pause</h3>
+      <p>Development pauses during the Japanese Occupation, as daily life across Singapore is upended.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/2roxy_dyzl1v.jpg');"></div>
+      <div class="year">1950s – 1970s</div>
+      <h3>Post-War Recovery</h3>
+      <p>Post-war recovery brings department stores, cinemas (like Roxy and Odeon), and entertainment spots. The area transforms into a vibrant residential and commercial suburb.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/koon-seng-road-joo-chiat-terrace-houses_rjiklk.jpg');"></div>
+      <div class="year">1991 – 1993</div>
+      <h3>Conservation Begins</h3>
+      <p>The Urban Redevelopment Authority gazettes over 500 buildings for conservation, protecting the area's unique shophouse architecture.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="year">2004</div>
+      <h3>A Community Pushes Back</h3>
+      <p>Residents form the “Save Joo Chiat Working Group” to push back against rising vice and nightlife issues, restoring a family-friendly neighbourhood.</p>
+    </div>
+    <div class="v-timeline-item">
+      <div class="v-timeline-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/2010s_rkvnit.jpg');"></div>
+      <div class="year">2011</div>
+      <h3>Singapore's First Heritage Town</h3>
+      <p>The area is officially designated Singapore's first Heritage Town, becoming a cultural hub for food, boutique hotels, and tourism.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-band">
+  <h2>Ready to start exploring?</h2>
+  <a class="btn" href="index.html#participate">GET STARTED</a>
+</section>
+
+<footer>
+  © CurioPort — Katong-Joo Chiat
+</footer>
+
+</body>
+</html>

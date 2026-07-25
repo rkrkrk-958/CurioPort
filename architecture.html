@@ -5,16 +5,90 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Architecture — CurioPort</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+  .shophouse-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fbf9f4;
+    border: 1px solid #e0dcd3;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  .shophouse-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .hotspot {
+    cursor: pointer;
+    transition: transform 0.2s ease, fill 0.2s ease;
+  }
+  .hotspot-pulse {
+    animation: shophouse-pulse 2s infinite;
+    transform-origin: center;
+  }
+  .hotspot:hover .hotspot-core {
+    fill: #ff4757;
+    r: 12;
+  }
+  .hotspot:hover .hotspot-pulse {
+    stroke: #ff4757;
+  }
+  @keyframes shophouse-pulse {
+    0% { r: 10; opacity: 0.8; stroke-width: 2; }
+    50% { r: 22; opacity: 0.3; stroke-width: 4; }
+    100% { r: 28; opacity: 0; stroke-width: 1; }
+  }
+
+  .facade-info-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+  }
+
+  .facade-info-card{
+    background:#fff;
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    border: 2px solid transparent;
+    scroll-margin-top: 100px;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .facade-info-card.highlight{
+    border-color: #ff3838;
+    box-shadow: 0 4px 18px rgba(255,56,56,0.25);
+  }
+
+  .facade-info-card h3{
+    margin: 0 0 10px 0;
+    color: var(--teal-dark);
+    font-size: 1.05rem;
+  }
+
+  .facade-info-card p{
+    margin:0;
+    color:#555;
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+</style>
 </head>
 <body>
 
 <nav>
   <div class="nav-links">
+    <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="map-and-directory.html">Map and Directory</a>
     <a href="history.html">History</a>
     <a href="hidden-gems.html">Hidden Gems</a>
-    <a href="architecture.html" class="active">Architecture</a>
+    <a href="architecture.html">Architecture</a>
   </div>
   <a class="logo" href="index.html">
     <img src="https://res.cloudinary.com/zcatt5nm/image/upload/f_auto,q_auto/image_1_jowpo2" alt="CurioPort logo">
@@ -23,123 +97,21 @@
 
 <section class="page-hero">
   <h1>Architecture</h1>
-  <p>Reading the shophouse facades of Katong-Joo Chiat.</p>
-  <div class="breadcrumb"><a href="index.html">Home</a> / Architecture</div>
-</section>
-
-<section class="content">
-  <div class="content-inner">
-    <h2>What to Look Out For</h2>
-    <p class="lead">
-      Every facade along the trail tells you something about when it was
-      built and who lived there. Here's what to notice as you walk.
-    </p>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-image" style="background-image:url('https://picsum.photos/seed/arch-tiles/400/300');"></div>
-        <div class="card-body">
-          <h3>Painted Tiles</h3>
-          <p>Colourful ceramic tiles imported in the early 1900s, often floral or geometric, framing doors and windows.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('https://picsum.photos/seed/arch-shutters/400/300');"></div>
-        <div class="card-body">
-          <h3>Timber Shutters</h3>
-          <p>Louvred wooden shutters that let air through while keeping the tropical sun out.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('https://picsum.photos/seed/arch-fivefoot/400/300');"></div>
-        <div class="card-body">
-          <h3>Five-Foot Way</h3>
-          <p>The covered walkway in front of every shophouse row, a sheltered path connecting one shop to the next.</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image" style="background-image:url('https://picsum.photos/seed/arch-pediment/400/300');"></div>
-        <div class="card-body">
-          <h3>Ornamented Pediments</h3>
-          <p>Decorative crests above the upper floor, often carrying a family name or the year the building was completed.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="content" style="padding-top:0;">
-  <div class="content-inner">
+  <div class="content-inner"> <br>
     <h2>Explore the Facade</h2>
-    <p class="lead">Hover or tap each marker to see what it's called.</p>
-    <style>
-      .shophouse-container {
-        position: relative;
-        max-width: 1000px;
-        margin: 0 auto;
-        background: #fbf9f4;
-        border: 1px solid #e0dcd3;
-        border-radius: 8px;
-        overflow: hidden;
-        padding: 20px;
-      }
-
-      .shophouse-svg {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .hotspot {
-        cursor: pointer;
-        transition: transform 0.2s ease, fill 0.2s ease;
-      }
-
-      .hotspot-pulse {
-        animation: shophouse-pulse 2s infinite;
-        transform-origin: center;
-      }
-
-      .hotspot:hover .hotspot-core {
-        fill: #ff4757;
-        r: 12;
-      }
-
-      .hotspot:hover .hotspot-pulse {
-        stroke: #ff4757;
-      }
-
-      @keyframes shophouse-pulse {
-        0% {
-          r: 10;
-          opacity: 0.8;
-          stroke-width: 2;
-        }
-        50% {
-          r: 22;
-          opacity: 0.3;
-          stroke-width: 4;
-        }
-        100% {
-          r: 28;
-          opacity: 0;
-          stroke-width: 1;
-        }
-      }
-    </style>
+    <p class="lead">Tap each marker to learn more about each element!</p>
 
     <div class="shophouse-container">
       <svg class="shophouse-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
-
         <rect x="0" y="0" width="1000" height="100" fill="#d0e8f8" opacity="0.6"/>
-
         <polygon points="50,150 150,130 250,150 350,130 450,150 550,130 650,150 750,130 850,150 950,130" fill="none" stroke="#5c4033" stroke-width="4"/>
         <path d="M 50,150 Q 500,160 950,150" fill="none" stroke="#8b5a2b" stroke-width="3"/>
-
         <rect x="60" y="155" width="880" height="40" fill="#f5efdf" stroke="#4a3b32" stroke-width="2"/>
         <path d="M 80,175 Q 110,190 140,175 Q 170,190 200,175 Q 230,190 260,175 M 280,175 Q 310,190 340,175 Q 370,190 400,175 Q 430,190 460,175 M 480,175 Q 510,190 540,175 Q 570,190 600,175 Q 630,190 660,175 M 680,175 Q 710,190 740,175 Q 770,190 800,175 Q 830,190 860,175" fill="none" stroke="#9e7b66" stroke-width="2"/>
-
         <rect x="60" y="195" width="880" height="130" fill="#fdfbf7" stroke="#4a3b32" stroke-width="2"/>
-
         <g stroke="#6b5344" stroke-width="2" fill="#eae3d2">
           <rect x="60" y="195" width="20" height="130"/>
           <rect x="230" y="195" width="20" height="130"/>
@@ -148,7 +120,6 @@
           <rect x="740" y="195" width="20" height="130"/>
           <rect x="920" y="195" width="20" height="130"/>
         </g>
-
         <g stroke="#3e4a3d" stroke-width="1.5" fill="#e2ede0">
           <rect x="95" y="210" width="40" height="90" rx="3"/>
           <rect x="155" y="210" width="40" height="90" rx="3"/>
@@ -161,9 +132,7 @@
           <rect x="775" y="210" width="40" height="90" rx="3"/>
           <rect x="835" y="210" width="40" height="90" rx="3"/>
         </g>
-
         <rect x="60" y="325" width="880" height="110" fill="#f7f3eb" stroke="#4a3b32" stroke-width="2"/>
-
         <g fill="#3b7a78" opacity="0.7">
           <rect x="90" y="340" width="30" height="60" rx="2"/>
           <rect x="260" y="340" width="30" height="60" rx="2"/>
@@ -171,7 +140,6 @@
           <rect x="600" y="340" width="30" height="60" rx="2"/>
           <rect x="770" y="340" width="30" height="60" rx="2"/>
         </g>
-
         <g stroke="#3a3a3a" stroke-width="2">
           <path d="M 60,370 L 60,430 M 130,370 L 130,430 M 230,370 L 230,430 M 300,370 L 300,430 M 400,370 L 400,430 M 470,370 L 470,430 M 570,370 L 570,430 M 640,370 L 640,430 M 740,370 L 740,430 M 810,370 L 810,430 M 920,370 L 920,430" fill="none" stroke="#5a5a5a" stroke-width="4"/>
           <rect x="140" y="390" width="80" height="40" fill="none" stroke="#222" stroke-dasharray="3,3"/>
@@ -180,50 +148,85 @@
           <rect x="650" y="390" width="80" height="40" fill="none" stroke="#222" stroke-dasharray="3,3"/>
           <rect x="820" y="390" width="80" height="40" fill="none" stroke="#222" stroke-dasharray="3,3"/>
         </g>
-
         <line x1="0" y1="435" x2="1000" y2="435" stroke="#333" stroke-width="3"/>
 
-        <g class="hotspot" data-element="terracotta-roof" onclick="alert('Terracotta Roof Tiles & Pitch Roof');">
+        <g class="hotspot" data-element="terracotta-roof" onclick="alert('Terracotta Roof Tiles &amp; Pitch Roof'); showFacadeInfo('terracotta-roof')">
           <circle class="hotspot-pulse" cx="300" cy="138" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="300" cy="138" r="8" fill="#ff3838"/>
         </g>
-
-        <g class="hotspot" data-element="frieze-festoons" onclick="alert('Plasterwork Festoons & Relief Frieze');">
+        <g class="hotspot" data-element="frieze-festoons" onclick="alert('Plasterwork Festoons &amp; Relief Frieze'); showFacadeInfo('frieze-festoons')">
           <circle class="hotspot-pulse" cx="490" cy="175" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="490" cy="175" r="8" fill="#ff3838"/>
         </g>
-
-        <g class="hotspot" data-element="corinthian-pilasters" onclick="alert('Corinthian / Composite Pilasters');">
+        <g class="hotspot" data-element="corinthian-pilasters" onclick="alert('Corinthian / Composite Pilasters'); showFacadeInfo('corinthian-pilasters')">
           <circle class="hotspot-pulse" cx="240" cy="250" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="240" cy="250" r="8" fill="#ff3838"/>
         </g>
-
-        <g class="hotspot" data-element="louvred-shutters" onclick="alert('French Louvored Timber Shutters');">
+        <g class="hotspot" data-element="louvred-shutters" onclick="alert('French Louvred Timber Shutters'); showFacadeInfo('louvred-shutters')">
           <circle class="hotspot-pulse" cx="625" cy="255" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="625" cy="255" r="8" fill="#ff3838"/>
         </g>
-
-        <g class="hotspot" data-element="majolica-tiles" onclick="alert('Glazed Peranakan Majolica Tiles');">
+        <g class="hotspot" data-element="majolica-tiles" onclick="alert('Glazed Peranakan Majolica Tiles'); showFacadeInfo('majolica-tiles')">
           <circle class="hotspot-pulse" cx="445" cy="365" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="445" cy="365" r="8" fill="#ff3838"/>
         </g>
-
-        <g class="hotspot" data-element="forecourt-gate" onclick="alert('Residential Forecourt & Cast-Iron Gates');">
+        <g class="hotspot" data-element="forecourt-gate" onclick="alert('Residential Forecourt &amp; Cast-Iron Gates'); showFacadeInfo('forecourt-gate')">
           <circle class="hotspot-pulse" cx="520" cy="410" r="14" fill="none" stroke="#ff3838"/>
           <circle class="hotspot-core" cx="520" cy="410" r="8" fill="#ff3838"/>
         </g>
-
       </svg>
+    </div>
+
+    <div class="facade-info-grid">
+      <div class="facade-info-card" id="terracotta-roof">
+        <h3>Terracotta Roof Tiles &amp; Pitch Roof</h3>
+        <p>Terracotta roof tiles became a common feature of Katong–Joo Chiat shophouses during the late 19th and early 20th centuries, influenced by Chinese and European building traditions. The steeply pitched roof was designed to cope with Singapore's tropical climate by allowing heavy rainwater to drain quickly while keeping the building cooler.</p>
+      </div>
+      <div class="facade-info-card" id="frieze-festoons">
+        <h3>Plasterwork Festoons &amp; Relief Frieze</h3>
+        <p>Plasterwork festoons and relief friezes became popular during the Early and Late Shophouse styles, reflecting the influence of Victorian and Neoclassical architecture introduced during the British colonial period. These decorative features displayed the owner's wealth and added an elegant, artistic character to the building's façade.</p>
+      </div>
+      <div class="facade-info-card" id="corinthian-pilasters">
+        <h3>Corinthian / Composite Pilasters</h3>
+        <p>Corinthian and Composite pilasters were inspired by classical Greek and Roman architecture and became popular in Singapore during the late 19th and early 20th centuries through British colonial design. They gave shophouses a grand and symmetrical appearance while showcasing the blend of Western architectural styles with local building traditions.</p>
+      </div>
+      <div class="facade-info-card" id="louvred-shutters">
+        <h3>French Louvred Timber Shutters</h3>
+        <p>French louvred timber shutters were introduced through European colonial influence and became a defining feature of many pre-war shophouses in Katong–Joo Chiat. Their adjustable wooden slats allowed natural ventilation and light while protecting interiors from the tropical sun and rain.</p>
+      </div>
+      <div class="facade-info-card" id="majolica-tiles">
+        <h3>Glazed Peranakan Majolica Tiles</h3>
+        <p>Glazed Peranakan Majolica tiles were widely imported from Britain, Belgium, and Japan during the late 19th and early 20th centuries as decorative building materials. Their colourful floral and geometric designs reflected Peranakan culture and prosperity, while their glazed surface made them durable and easy to clean.</p>
+      </div>
+      <div class="facade-info-card" id="forecourt-gate">
+        <h3>Residential Forecourt &amp; Cast-Iron Gates</h3>
+        <p>The residential forecourt was introduced as a small buffer between the street and the home, providing space for light, ventilation, and social interaction in early shophouse communities. Ornate cast-iron gates, which became fashionable during the colonial era, offered security while displaying decorative craftsmanship that complemented the elegant façades of Katong–Joo Chiat shophouses.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<section class="cta-band">
   <h2>Ready to start exploring?</h2>
   <a class="btn" href="index.html#participate">GET STARTED</a>
 </section>
 
 <footer>
-  © CurioPort — Katong-Joo Chiat Heritage Trail
+  © CurioPort — Katong-Joo Chiat
 </footer>
+
+<script>
+  function showFacadeInfo(id){
+    document.querySelectorAll('.facade-info-card').forEach(function(card){
+      card.classList.remove('highlight');
+    });
+    var target = document.getElementById(id);
+    if(target){
+      target.classList.add('highlight');
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+</script>
 
 </body>
 </html>

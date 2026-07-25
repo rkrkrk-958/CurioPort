@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faces of Joo Chiat — CurioPort</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  html{ scroll-behavior: smooth; }
+  .faces-section{
+    background: #1e2a8c;
+    padding: 60px 24px;
+    text-align:center;
+  }
+
+  .faces-section h2{
+    color:#fff;
+    font-size:1.8rem;
+    margin-bottom:36px;
+  }
+
+  .faces-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .face-card{
+    background:#fff;
+    border-radius: 12px;
+    overflow:hidden;
+    text-align:left;
+    display:block;
+    transition: transform 0.2s ease;
+  }
+  .face-card:hover{ transform: translateY(-4px); }
+
+  .face-avatar{
+    height: 200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:3rem;
+    font-weight:800;
+    color:#fff;
+  }
+
+  .face-card .face-body{
+    padding: 14px 16px 18px 16px;
+  }
+
+  .face-card h3{
+    margin:0 0 6px 0;
+    font-size:0.95rem;
+    color:#1c1c1c;
+  }
+
+  .face-card p{
+    margin:0;
+    font-size:0.82rem;
+    color:#555;
+    line-height:1.5;
+  }
+
+  .detail-section{
+    background: var(--cream);
+    padding: 60px 24px;
+    scroll-margin-top: 80px;
+  }
+
+  .detail-inner{
+    max-width: 900px;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    gap: 36px;
+    align-items:center;
+  }
+
+  .detail-photo{
+    height: 220px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+  .detail-inner h2{
+    color: var(--teal-mid);
+    font-size: 1.6rem;
+    margin: 0 0 12px 0;
+  }
+
+  .detail-inner p{
+    color:#444;
+    line-height:1.7;
+    font-size:0.95rem;
+  }
+
+  .detail-section.alt{
+    background: #f2ede0;
+  }
+
+  @media (max-width: 700px){
+    .detail-inner{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-links">
+    <a href="about.html">About Us</a>
+    <a href="map-and-directory.html">Map and Directory</a>
+    <a href="history.html">History</a>
+    <a href="hidden-gems.html">Hidden Gems</a>
+    <a href="architecture.html">Architecture</a>
+  </div>
+  <a class="logo" href="index.html">
+    <img src="https://res.cloudinary.com/zcatt5nm/image/upload/f_auto,q_auto/image_1_jowpo2" alt="CurioPort logo">
+  </a>
+</nav>
+
+<section class="page-hero">
+  <h1>Faces of Joo Chiat</h1>
+  <p>Celebrating the figures across generations who helped shape the area.</p>
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="history.html">History</a> / Faces of Joo Chiat</div>
+</section>
+
+<section class="faces-section">
+  <h2>Faces of Joo Chiat</h2>
+  <div class="faces-grid">
+    <a class="face-card" href="#chew-joo-chiat">
+      <div class="face-avatar"
+     style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/chew-joo-chiat_ouyedem.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+      <div class="face-body">
+        <h3>Chew Joo Chiat</h3>
+        <p>A migrant from China who became a wealthy landowner and philanthropist, eventually nicknamed the "King of Katong."</p>
+      </div>
+    </a>
+    <a class="face-card" href="#cheong-koon-seng">
+      <div class="face-avatar"
+     style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/Cheong-Koon-Seng_vz7fzl.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+      <div class="face-body">
+        <h3>Cheong Koon Seng</h3>
+        <p>A Straits-born businessman, auctioneer, and real estate agent. Namesake of Koon Seng Road.</p>
+      </div>
+    </a>
+    <a class="face-card" href="#charles-pemberton-paglar">
+      <div class="face-avatar"
+     style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/paglarjpg_jqlrsx.jpg');
+            background-size:cover;
+            background-position:center;">
+</div>
+      <div class="face-body">
+        <h3>Charles Joseph Pemberton Paglar</h3>
+        <p>A prominent Eurasian community leader, philanthropist, Legislative Council member, and practising surgeon.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="detail-section" id="chew-joo-chiat">
+  <div class="detail-inner">
+    <div class="detail-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/chew-joo-chiat_ouyedem.jpg');"></div>
+    <div>
+      <h2>Chew Joo Chiat (1857–1926)</h2>
+      <p>
+Chew Joo Chiat was a wealthy landowner and philanthropist who built his fortune through trading and cultivating gambier, nutmeg, and coconuts before acquiring large tracts of land across Katong. As the area developed, his land became highly valuable, and he generously donated part of his private estate to create what is now Joo Chiat Road. By selling parcels of his land for housing, he also helped shape the neighborhood's iconic Peranakan shophouses and terrace homes. His immense influence on the area's growth earned him the title "King of Katong," with the neighborhood and several roads named in his honor.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section alt" id="cheong-koon-seng">
+  <div class="detail-inner">
+    <div class="detail-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/Cheong-Koon-Seng_vz7fzl.jpg');"></div>
+    <div>
+      <h2>Cheong Koon Seng (1880-1934)</h2>
+      <p>Cheong Koon Seng was a prominent businessman, real estate agent, auctioneer, and community leader who played a major role in the development of Katong and the East Coast. A founding student of Anglo-Chinese School, he later helped secure land for its Barker Road campus. As a Municipal Commissioner and Justice of the Peace, he championed infrastructure improvements and led the purchase of the Chinese Swimming Club's permanent Katong site. His contributions to the area are commemorated by Koon Seng Road, now renowned for its colorful Peranakan shophouses.</p>
+    </div>
+  </div>
+</section>
+
+<section class="detail-section" id="charles-pemberton-paglar">
+  <div class="detail-inner">
+    <div class="detail-photo" style="background-image:url('https://res.cloudinary.com/zcatt5nm/image/upload/paglarjpg_jqlrsx.jpg');"></div>
+    <div>
+      <h2>Charles Joseph Pemberton Paglar (1894-1954)</h2>
+      <p>Charles Joseph Pemberton Paglar was a respected surgeon, philanthropist, and community leader whose medical practice in Joo Chiat grew into the Paglar Maternity and Nursing Home, located on the site of today's Parkway East Hospital. During World War II, he earned the nickname "Doctor of the Poor" for providing free treatment, medicine, food, clothing, and other assistance to those in need. Beyond healthcare, he supported youth and community development by founding the Katong Boys' Club, leading the Singapore Recreation Club, and generously supporting local sporting organizations, the Boy Scouts, and the St. John Ambulance Brigade.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Ready to start exploring?</h2>
+  <a class="btn" href="index.html#participate">GET STARTED</a>
+</section>
+
+<footer>
+  © CurioPort — Katong-Joo Chiat
+</footer>
+
+</body>
+</html>
